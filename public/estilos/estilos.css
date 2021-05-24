@@ -30,13 +30,11 @@ header{
 
 footer{
     text-align: center;
-    border: 1px solid black;
     margin: 5px;
 }
 
 #cab_esquerda, #cab_centro, #cab_direita{
-    border: 1px solid black;
-    height: 115px;
+     height: 115px;
 }
     
 
@@ -49,16 +47,14 @@ footer{
 }
 
 #corpo{
-    border: 2px solid darkblue;
     height: 420px;
     margin: 5px;
 }
 
-#btn_submit, #btn_data, #btn_hora{
+#btn_livros, #btn_editoras, #btn_autoras, #btn_usuarios, #btn_configuracoes{
     margin: 10px 1px 1px 30px;
 }
 
-#dados, #vrmysql, #data, #hora{
-    border: 1px solid black;
-    margin: 5px;
+#dados{
+     margin: 5px;
 }

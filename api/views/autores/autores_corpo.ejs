@@ -1,0 +1,46 @@
+<!-- Injetando JAVASCRIPT NA PAGINA DE VISUALIZACAO-->
+
+<%- include("../autores/autores_head.ejs") %>
+
+  <%- include("../autores/autores_menu_horizontal.ejs") %>
+
+    <!-- Corpo da Pagina-->
+    <section id="corpo_rel">
+        <legend> Registro de Autores Cadastrados </legend>
+        <table id="tabela" class="table-striped">
+          <thead id="cabecalho_rel">
+            <tr>
+              <th id="codigo"> Código </th>
+              <th id="a-i"> A/I </th>
+              <th id="nome"> Nome do Autor </th>
+              <th id="apelido"> Apelido </th>
+              <th id="sexo"> Sexo </th>
+              <th id="telefone"> Telefone </th>
+              <th id="email"> e-mail </th>
+              <th></th>
+              <th id="novo"> <a class="btn btn-sucess btn-block" href="autores/novo">Novo Autor</a></th>
+            </tr>
+          </thead>
+
+          <tbody id="corpo_rel">
+            <% for(i=0; i<obj_autores.length; i++) {%>
+              <tr>
+                <td id="codigo"><%= obj_autores[i].aut_codigo %></td>
+                <td id="a-i"> </td>
+                <td id="nome"><%= obj_autores[i].aut_nome %></td>
+                <td id="apelido"><%= obj_autores[i].aut_apelido %></td>
+                <td id="sexo"><%= obj_autores[i].aut_sexo %></td>
+                <td id="fone"><%= obj_autores[i].aut_telefone %></td>
+                <td id="email"><%= obj_autores[i].aut_email %></td>
+
+                <td id="editar"> <a class="btn btn-primary btn-block" href=<%="/autores/editar/" + 
+                    obj_autores[i].aut_codigo %>> Editar </a></td>
+                <td id="ativar"> <a class="btn btn-danger btn-block" href=<%="/autores/inativar/" +
+                    obj_autores[i].aut_codigo %>> Inativar </a></td>
+             </tr>
+            <% } %>
+          </tbody>
+        </table>
+    </section>
+
+    <%- include("../inicio/index_footer.ejs") %>

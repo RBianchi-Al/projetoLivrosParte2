@@ -1,0 +1,87 @@
+<%- include("../autores/autores_head.ejs") %>
+
+  <%- include("../autores/autores_menu_horizontal.ejs") %>
+
+    <!-- Corpo da Pagina de Edição dos autores -->
+<div id="caminho">
+    <p id="path"> <%= caminho %> </p>
+</div>
+
+<form action="/autores/gravar" method="post">
+  
+
+  <div id="corpo_edit">
+
+    <br>
+    <div class="form-row">
+      <div class="col-md-1 offset-md-1">
+        <label> Codigo </label>
+        <input type="text" class="form-control" value="<%= obj_autores[0].aut_codigo %>" name="aut_codigo" readonly>
+      </div>
+    </div>
+
+    <br>
+    <div class="form-row">
+      <div class="col-md-1 offset-md-1">
+        <label> A/I> </label>
+        <input type="text" class="form-control" name="aut_ativoinativo" maxlenght="1">
+      </div>
+    </div>
+
+    <br>
+    <div class="form-row">
+      <div class="col-md-4 offset-md-1">
+        <label> Nome do Autor </label>
+        <input type="text" class="form-control" value="<%= obj_autores[0].aut_nome %>" name="aut_nome" maxlenght="40">
+      </div>
+    </div>
+
+    <br>
+    <div class="form-row">
+      <div class="col-md-2 offset-md-1">
+        <label> Apelido </label>
+        <input type="text" class="form-control" value="<%= obj_autores[0].aut_apelido %>" name="aut_apelido" maxlenght="10">
+      </div>
+    </div>
+
+    <br>
+    <div class="form-row">
+      <div class="col-md-1 offset-md-1">
+        <label> Sexo </label>
+        <input type="text" class="form-control" value="<%= obj_autores[0].aut_sexo %>" name="aut_sexo" maxlenght="1">
+      </div>
+    </div>
+
+    <br>
+    <div class="form-row">
+      <div class="col-md-2 offset-md-1">
+        <label> Telefone </label>
+        <input type="text" class="form-control" value="<%= obj_autores[0].aut_telefone %>" name="aut_telefone" maxlenght="15">
+      </div>
+    </div>
+
+    <br>
+    <div class="form-row">
+      <div class="col-md-4 offset-md-1">
+        <label> E-mail do Autor </label>
+        <input type="text" class="form-control" value="<%= obj_autores[0].aut_email %>" name="aut_email" maxlenght="40">
+      </div>
+    </div>
+
+  </div>
+
+  <div id="botoes_confirmar">
+    <div class="form-group row">
+        <div class="col-md-3">
+          <button type="submit" class="btn btn-primary btn-block">Confirmar</button>
+        </div>
+        <div class="col-md-3">
+          <a class="btn btn-secondary btn-block" href="/autores/livrosListar">Cancelar</a>
+        </div>
+    </div>
+  </div>
+  
+
+</form> 
+
+<%- include("../inicio/index_footer.ejs") %>

@@ -1,5 +1,5 @@
 var mysql = require('mysql');
-var database = 'dados';
+var database = 'dados211n';
 
 // instanciar objeto de acesso ao banco de dados
 var conexao = mysql.createConnection({
@@ -17,7 +17,7 @@ conexao.connect((err) => {
     console.log('\nConexão estabilizada com sucesso!!!')
 })
 
-//conexao.query('USE' + database);
-//console.log('\nBanco de dados '+database.toUpperCase())
+conexao.query('USE ' + database);
+console.log('\nBanco de dados '+database.toUpperCase())
 
 module.exports = conexao;

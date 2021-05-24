@@ -2,4 +2,4 @@ const controllerIndex = require('../controllers/indexControllers.js');
 
 app.get('/', controllerIndex.indexControllers);
 
-// app.get('/getMysql', controllerIndex.getVrMysql);
+app.get('/getMysql', controllerIndex.getVrMysql);
