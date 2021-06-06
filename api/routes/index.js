@@ -1,5 +1,7 @@
-const controllerIndex = require('../controllers/indexControllers.js');
+var conexao = require('../../config/conexao')
 
-app.get('/', controllerIndex.indexControllers);
+// const controllerIndex = require('../controllers/indexControllers.js');
 
-app.get('/getMysql', controllerIndex.getVrMysql);
+// app.get('/', controllerIndex.indexControllers);
+
+// app.get('/getMysql', controllerIndex.getVrMysql);

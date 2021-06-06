@@ -18,5 +18,13 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RBianchi-Al/projetoLivrosParte2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RBianchi-Al/projetoLivrosParte2/issues"
+  },
+  "homepage": "https://github.com/RBianchi-Al/projetoLivrosParte2#readme"
 }

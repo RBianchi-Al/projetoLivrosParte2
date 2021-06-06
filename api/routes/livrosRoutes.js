@@ -1,3 +1,9 @@
-const controllerLivros = require('../controllers/livrosControllers.js');
+const controllerRoutes = require('../controllers/livrosControllers.js');
 
-app.get('/livros/listar', controllerLivros.listarLivros);
+app.get('/livros/listar', controllerRoutes.livrosControllers);
+
+const controllerLivros = require('../controllers/livrosControllers');
+
+app.get('/', controllerLivros.livrosControllers);
+
+

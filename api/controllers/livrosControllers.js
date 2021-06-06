@@ -1,13 +1,22 @@
 const livrosController = require("../models/livrosModels.js");
 
 module.exports = {
-    listarLivros,
+    livrosControllers,
+
     
 }
 
-function listarLivros(req, res){
-    livrosController.listarLivros(function (err, resultado){
-        console.log("Listar Livro {Model}" , resultado);
-    })
-    
-}
+
+function livrosControllers(req, res){
+    res.render('livros/livros_corpo.ejs', {
+        title: 'NodeJs-Livros',
+        titulo: 'Projeto CRUD - Nodejs - Express - Mysql - JavaScript',
+        subtitulo:'Programação Script - WEB - 5º Semestre',
+        livros:'Livros',
+        editoras:'Editoras',
+        autores: 'Autores',
+        usuarios:'Usuários',
+        configuracoes:'Configurações',
+        nomealuno:'Renata Bianchi'
+    });
+};

@@ -4,7 +4,7 @@ var database = 'dados211n';
 // instanciar objeto de acesso ao banco de dados
 var conexao = mysql.createConnection({
     user: 'root',
-    password: '1234',
+    password: '123456',
     host: 'localhost',
     port: 3306
 });
@@ -18,6 +18,6 @@ conexao.connect((err) => {
 })
 
 conexao.query('USE ' + database);
-console.log('\nBanco de dados '+database.toUpperCase())
+console.log('\nBanco de dados '+ database.toUpperCase())
 
 module.exports = conexao;
