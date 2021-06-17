@@ -23,6 +23,9 @@ function autoresGetAll(req, res) {
     //res.send("Rota autores encontrada");
 }
 
+// bandeira, sinalizadores que estão chamando corretamente
+
+
 function autoresGetByid(req, res){
     var id = req.params.codigo;
     console.log("Parametro esperado: " + id);

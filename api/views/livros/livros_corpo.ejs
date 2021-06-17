@@ -6,85 +6,17 @@
         
 <!-- PRIMEIRA LINHA DE CARDS -->
 <section>
-  <div id="dados">
-    <div class="row">
-      <div class="col-sm-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Cadastro de Livros</h5>
-            <figure>
-              <button id="btn_auto" class="closing" onClick="load_livros()"> <img src="./imagens/livro.jpeg" alt="Livros"
-              width="80" height="80"/></button>
-            </figure>
-           </div>
-        </div>
+  <div id="cadastro">
+    <div class="form-row">
+      <div class="col-md-1 offset-md-0" id="cab_esquerda">
+        <label>Código</label>
+        <input type="text" value="<%= obj_livros[0].liv_codigo%>" name="liv_codigo" class="form-contro" size="5" readonly>
+        
+
       </div>
 
-      <div class="col-sm-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Cadastro de Editoras</h5>
-            <figure>
-              <button id="btn_auto" class="closing" onClick="load_editoras()"> <img src="./imagens/editora.jpeg" alt="Editoras"
-              width="80" height="80"/></button>
-            </figure>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Cadastro de Autores</h5>
-            <figure>
-              <button id="btn_auto" class="closing" onClick="load_autores()"> <img src="./imagens/autor.jpeg" alt="Autores"
-              width="80" height="80"/></button>
-            </figure>
-          </div>
-        </div>
-      </div>
     </div>
 
-
-    <!--  SEGUNDA LINHA DE CARDS -->
-
-    <div class="row" style="margin-top: 5px;">
-      <div class="col-sm-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Cadastro de Usuários</h5>
-            <figure>
-              <button id="btn_auto" class="closing" onClick="load_usuarios()"> <img src="./imagens/usuario.jpg" alt="Usuários"
-              width="80" height="80"/></button>
-            </figure>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Cadastro de Configurações</h5>
-            <figure>
-              <button id="btn_auto" class="closing" onClick="load_configuracoes()"> <img src="./imagens/configurando.jpeg" alt="Configurações"
-              width="80" height="80"/></button>
-            </figure>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-sm-4">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Outros</h5>
-            <figure>
-              <button id="btn_auto" class="closing" onClick=""> <img src="./imagens/livre.jpg" alt="Livre"
-              width="80" height="80"/></button>
-            </figure>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 

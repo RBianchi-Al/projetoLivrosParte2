@@ -1,0 +1,49 @@
+<%- include("../livros/livros_head.ejs") %>
+
+<%- include("../livros/livros_header.ejs") %>
+
+<%- include("../livros/livros_menu_horizontal.ejs") %>
+        
+<!-- PRIMEIRA LINHA DE CARDS -->
+<section>
+  <fieldset>
+  <legend> Registro de livros Cadastrados </legend>
+  <table id="tabela" class="table-striped">
+    <thead id="cabecalho_rel">
+      <tr>
+        <th id="codigo"> Código </th>
+        <th id="a-i"> A/I </th>
+        <th id="titulo"> Título </th>
+        <th id="edicao"> Edição </th>
+        <th id="isbn"> ISBN </th>
+        <th id="ano"> Ano </th>
+        <th id="nome"> e-mail </th>
+        <th></th>
+        <!-- <th id="novo"> <a class="btn btn-sucess btn-block" href="livros/incluir">Novo Autor</a></th> -->
+      </tr>
+    </thead>
+
+    <tbody id="corpo_rel">
+      <% for(i=0; i<obj_livros.length; i++) {%>
+        <tr>
+          <td id="codigo"><%= obj_livros[i].liv_codigo %></td>
+          <td id="a-i"> <%= obj_livros[i].liv_ativoinativo %></td>
+          <td id="titulo"><%= obj_livros[i].liv_titulo %></td>
+          <td id="edicao"><%= obj_livros[i].liv_edicao %></td>
+          <td id="isbn"><%= obj_livros[i].liv_isbn %></td>
+          <td id="ano"><%= obj_livros[i].liv_ano %></td>
+          <td id="nome"><%= obj_livros[i].edit_nome %></td>
+
+          <td id="editar"> <a class="btn btn-primary btn-block" href=<%="/livros/editar/" + 
+              obj_livros[i].aut_codigo %>> Editar </a></td>
+          <td id="ativar"> <a class="btn btn-danger btn-block" href=<%="/livros/inativar/" +
+              obj_livros[i].aut_codigo %>> Inativar </a></td>
+       </tr>
+      <% } %>
+    </tbody>
+
+  </table>
+</fieldset>
+</section>
+
+    <%- include("../livros/livros_footer.ejs") %>
